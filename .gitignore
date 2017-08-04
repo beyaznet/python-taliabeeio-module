@@ -1,0 +1,7 @@
+*~
+*.sw?
+*.log
+*.pyc
+*__pycache__/
+*dist/
+*.egg-info
