@@ -1,5 +1,6 @@
-import requests
 import re
+import requests
+requests.packages.urllib3.disable_warnings()
 
 __all__ = ['TaliaBeeAPIError', 'TaliaBeeIO']
 
