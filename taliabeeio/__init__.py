@@ -12,28 +12,11 @@ class TaliaBeeIO(object):
     COMPONENT_GET_PATTERN = re.compile('^([adr]o|[ad]i)([0-9]{1,2})$')
     COMPONENT_SET_PATTERN = re.compile('^([adr]o)([0-9]{1,2})$')
 
-    def __init__(self, url='http://127.0.0.1', timeout=10):
+    def __init__(self, url='http://127.0.0.1', timeout=10, verify=False):
         super(TaliaBeeIO, self).__init__()
-        self._url = url
-        self._timeout = timeout
-
-    @property
-    def url(self):
-        return self._url
-
-    @url.setter
-    def url(self, value):
-        raise TaliaBeeAPIError('URL can be set only once.'
-                               'If you want to control a different device, '
-                               'please create a new TaliaBeeIO object.')
-
-    @property
-    def timeout(self):
-        return self._timeout
-
-    @timeout.setter
-    def timeout(self, value):
-        raise TaliaBeeAPIError('Timeout can be set only once.')
+        self.url = url
+        self.timeout = timeout
+        self.verify = verify
 
     def __getattribute__(self, attr):
         if attr in ('COMPONENT_GET_PATTERN', 'COMPONENT_SET_PATTERN'):
@@ -72,7 +55,7 @@ class TaliaBeeIO(object):
             return self.ao_write(groups[1], val)
 
     def _call(self, url):
-        r = requests.get(url, timeout=self.timeout)
+        r = requests.get(url, timeout=self.timeout, verify=self.timeout)
         if r.status_code != 200:
             raise Exception('Cannot connect. {}'.format(r.status_code))
         response = r.json()
