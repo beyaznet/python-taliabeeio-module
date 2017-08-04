@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='taliabeeio',
-    version='0.1.1',
+    version='0.1.3',
     packages=['taliabeeio'],
     description='Python TaliaBeeIO module',
     url = 'https://github.com/beyaznet/python-taliabeeio-module',

@@ -55,7 +55,7 @@ class TaliaBeeIO(object):
             return self.ao_write(groups[1], val)
 
     def _call(self, url):
-        r = requests.get(url, timeout=self.timeout, verify=self.timeout)
+        r = requests.get(url, timeout=self.timeout, verify=self.verify)
         if r.status_code != 200:
             raise Exception('Cannot connect. {}'.format(r.status_code))
         response = r.json()
