@@ -2,7 +2,9 @@
 *.sw?
 *.log
 *.pyc
-*.egg-info
-*build/
-*dist/
-*__pycache__/
+*.egg
+*.egg-info/
+build/
+dist/
+sdist/
+__pycache__/
