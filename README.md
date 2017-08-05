@@ -81,8 +81,8 @@ Create a new TaliaBeeIO instance. The instance communicates with the TaliaBee bo
 
 ```python
 >>> from taliabeeio import TaliaBeeIO
->>> io_local = TaliaBeeIO()
->>> print(io_local.ai3)
+>>> io = TaliaBeeIO()
+>>> print(io.ai3)
 1350
 >>> io_remote = TaliaBeeIO(url='http://192.168.0.10')
 >>> print(io_remote.ai3)
