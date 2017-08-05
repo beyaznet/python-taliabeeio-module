@@ -166,10 +166,24 @@ di_read method
 di_read(pin)
 ```
 
+Return the value of the digital input. `pin` is the digital input pin number and it's an integer between 1 and 16. The returning value is either `0` or `1`.
+
+```python
+>>> print(io.di_read(2))
+0
+```
+
 do_read method
 --------------
 ```python
 do_read(pin)
+```
+
+Return the value of the digital output. `pin` is the digital output pin number and it's an integer between 1 and 12. The returning value is either `0` or `1`.
+
+```python
+>>> print(io.do_read(8))
+0
 ```
 
 do_set method
@@ -178,10 +192,30 @@ do_set method
 do_set(pin)
 ```
 
+Set the digital output. `pin` is the digital output pin number and it's an integer between 1 and 12.
+
+```python
+>>> print(io.do8)
+0
+>>> io.do_set(8)
+>>> print(io.do8)
+1
+```
+
 do_reset method
 ---------------
 ```python
 do_reset(pin)
+```
+
+Reset the digital output. `pin` is the digital output pin number and it's an integer between 1 and 12.
+
+```python
+>>> print(io.do8)
+1
+>>> io.do_reset(8)
+>>> print(io.do8)
+0
 ```
 
 do_write method
@@ -190,10 +224,27 @@ do_write method
 do_write(pin, value)
 ```
 
+Write to the digital output. `pin` is the digital output pin number and it's an integer between 1 and 12. `value` is either `0`/`False` or `1`/`True`.
+
+```python
+>>> print(io.do3)
+0
+>>> io.do_write(3, True)
+>>> print(io.do3)
+1
+```
+
 ro_read method
 --------------
 ```python
 ro_read(pin)
+```
+
+Return the value of the relay output. `pin` is the relay output pin number and it's an integer between 13 and 16. The returning value is either `0` or `1`.
+
+```python
+>>> print(io.ro_read(14))
+0
 ```
 
 ro_set method
@@ -202,10 +253,30 @@ ro_set method
 ro_set(pin)
 ```
 
+Set the relay output. `pin` is the relay output pin number and it's an integer between 13 and 16.
+
+```python
+>>> print(io.ro14)
+0
+>>> io.ro_set(14)
+>>> print(io.ro14)
+1
+```
+
 ro_reset method
 ---------------
 ```python
 ro_reset(pin)
+```
+
+Reset the relay output. `pin` is the relay output pin number and it's an integer between 13 and 16.
+
+```python
+>>> print(io.ro14)
+1
+>>> io.ro_reset(14)
+>>> print(io.ro14)
+0
 ```
 
 ro_write method
@@ -214,17 +285,27 @@ ro_write method
 ro_write(pin, value)
 ```
 
+Write to the relay output. `pin` is the relay output pin number and it's an integer between 13 and 16. `value` is either `0`/`False` or `1`/`True`.
+
+```python
+>>> print(io.ro14)
+0
+>>> io.ro_write(14, True)
+>>> print(io.ro14)
+1
+```
+
 ai_read method
 --------------
 ```python
 ai_read(pin)
 ```
 
-Return the value of the analog input. `pin` is the analog input number and it's an integer between 1 and 4.
+Return the value of the analog input. `pin` is the analog input pin number and it's an integer between 1 and 4. The returning value is an integer between 1 and 4095.
 
 ```python
 >>> print(io.ai_read(2))
-0
+2
 ```
 
 ao_read method
@@ -233,7 +314,7 @@ ao_read method
 ao_read(pin)
 ```
 
-Return the value of the analog output. `pin` is the analog output number and it's an integer between 1 and 4.
+Return the value of the analog output. `pin` is the analog output pin number and it's an integer between 1 and 4. The returning value is an integer between 1 and 4095.
 
 ```python
 >>> print(io.ao_read(2))
@@ -246,7 +327,7 @@ ao_write method
 ao_write(pin, value)
 ```
 
-Write to the analog output. `pin` is the analog output pin number and it's an integer between 1 and 4. `value` is either `0`/`False` or `1`/`True`.
+Write to the analog output. `pin` is the analog output pin number and it's an integer between 1 and 4. `value` is an integer between 1 and 4095.
 
 ```python
 >>> print(io.ao2)
