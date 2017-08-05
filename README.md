@@ -126,9 +126,21 @@ print(io.ao4)
 
 Temperature
 -----------
+Read-only temperature value in Celsius.
+
+```python
+>>> print(io.temperature)
+28.275
+```
 
 Status
 ------
+The dictionary object which contains the values of all digital and analog I/O and the temperature.
+
+```python
+>>> print(io.status)
+{'di': {'2': 0, '8': 1, '13': 0, '7': 1, '11': 0, '15': 0, '14': 0, '6': 0, '10': 0, '16': 0, '1': 0, '4': 0, '9': 0, '3': 0, '12': 0, '5': 0}, 'do': {'2': 0, '8': 0, '7': 0, '11': 0, '6': 0, '10': 0, '1': 0, '4': 0, '9': 0, '3': 0, '12': 0, '5': 0}, 'temperature': 37.875, 'ro': {'15': 0, '14': 0, '13': 0, '16': 0}, 'ai': {'2': 0, '1': 250, '4': 0, '3': 1}, 'ao': {'2': 2000, '1': 0, '4': 0, '3': 0}}
+```
 
 di_read method
 --------------
