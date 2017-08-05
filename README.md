@@ -80,7 +80,13 @@ Create a new TaliaBeeIO instance. The instance communicates with the TaliaBee bo
 `verify` is the SSL certificate verification when HTTPS is used in `url`. Set `False` when the self-signed certificate is used and this is the situation in most cases.
 
 ```python
->>> io = TaliaBeeIO(url='http://192.168.0.10')
+>>> from taliabeeio import TaliaBeeIO
+>>> io_local = TaliaBeeIO()
+>>> print(io_local.ai3)
+1350
+>>> io_remote = TaliaBeeIO(url='http://192.168.0.10')
+>>> print(io_remote.ai3)
+0
 ```
 
 Digital inputs
