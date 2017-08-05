@@ -83,7 +83,7 @@ io = TaliaBeeIO(url='http://192.168.0.10')
 
 Digital inputs
 --------------
-Read-only digital input pins. `diN` where N is a number from `1` to `16`.
+Read-only digital inputs. `diN` where N is a number from `1` to `16`. Its value is either `0` or `1`.
 
 ```python
 print(io.di5)
@@ -91,7 +91,7 @@ print(io.di5)
 
 Digital outputs
 ---------------
-Writable digital output pins. `doN` where N is a number from `1` to `12`. Its value can be `0`/`False` or `1`/`True`.
+Writable digital outputs. `doN` where N is a number from `1` to `12`. Its value is either `0`/`False` or `1`/`True`.
 
 ```python
 io.do12 = True
@@ -100,12 +100,29 @@ print(io.do12)
 
 Relay
 -----
+Writable relay outputs. `roN` where N is a number from `13` to `16`. Its value is either `0`/`False` or `1`/`True`.
+
+```python
+io.ro14 = True
+print(io.ro14)
+```
 
 Analog inputs
 -------------
+Read-only 12 bit analog inputs. `aiN` where N is a number from `1` to `4`. Its value is between 1 and 4095.
+
+```python
+print(io.ai1)
+```
 
 Analog outputs
 --------------
+Writable 12 bit analog outputs. `aoN` where N is a number from `1` to `4`. Its value is between 1 and 4095.
+
+```python
+io.ao4 = 2000
+print(io.ao4)
+```
 
 Temperature
 -----------
