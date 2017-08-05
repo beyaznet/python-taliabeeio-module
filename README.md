@@ -69,7 +69,9 @@ io.reset()
 
 TaliaBeeIO object
 =================
+```python
 TaliaBeeIO(url='http://127.0.0.1', timeout=10, verify=False)
+```
 
 Create a new TaliaBeeIO instance. The instance communicates with the TaliaBee box at the given `url`. The default value is `http://127.0.0.1` and the instance communicates with the local box, if there is no given `url`.
 
