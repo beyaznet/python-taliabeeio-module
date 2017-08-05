@@ -220,10 +220,24 @@ ai_read method
 ai_read(pin)
 ```
 
+Return the value of the analog input. `pin` is the analog input number and it's an integer between 1 and 4.
+
+```python
+>>> print(io.ai_read(2))
+0
+```
+
 ao_read method
 --------------
 ```python
 ao_read(pin)
+```
+
+Return the value of the analog output. `pin` is the analog output number and it's an integer between 1 and 4.
+
+```python
+>>> print(io.ao_read(2))
+0
 ```
 
 ao_write method
@@ -232,8 +246,30 @@ ao_write method
 ao_write(pin, value)
 ```
 
+Write to the analog output. `pin` is the analog output pin number and it's an integer between 1 and 4. `value` is either `0`/`False` or `1`/`True`.
+
+```python
+>>> print(io.ao2)
+0
+>>> io.ao_write(2, 500)
+>>> print(io.ao2)
+500
+```
+
 reset method
 ------------
 ```python
 reset()
+```
+
+Reset all digital and analog outputs.
+
+```python
+>>> io.do3 = True
+>>> io.ao4 = 1350
+>>> print(io.do3, io.ao4)
+1 1350
+>>> io.reset()
+>>> print(io.do3, io.ao4)
+0 0
 ```
