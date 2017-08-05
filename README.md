@@ -104,8 +104,8 @@ Writable digital outputs. `doN` where N is a number from `1` to `12`. Its value 
 1
 ```
 
-Relay
------
+Relays
+------
 Writable relay outputs. `roN` where N is a number from `13` to `16`. Its value is either `0`/`False` or `1`/`True`.
 
 ```python
@@ -305,7 +305,7 @@ Return the value of the analog input. `pin` is the analog input pin number and i
 
 ```python
 >>> print(io.ai_read(2))
-2
+8
 ```
 
 ao_read method
