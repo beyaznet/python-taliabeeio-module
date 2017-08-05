@@ -162,39 +162,78 @@ The dictionary object which contains the values of all digital and analog I/O an
 
 di_read method
 --------------
+```python
+di_read(pin)
+```
 
 do_read method
 --------------
+```python
+do_read(pin)
+```
 
 do_set method
 -------------
+```python
+do_set(pin)
+```
 
 do_reset method
 ---------------
+```python
+do_reset(pin)
+```
 
 do_write method
 ---------------
+```python
+do_write(pin, value)
+```
 
 ro_read method
 --------------
+```python
+ro_read(pin)
+```
 
 ro_set method
 -------------
+```python
+ro_set(pin)
+```
 
 ro_reset method
 ---------------
+```python
+ro_reset(pin)
+```
 
 ro_write method
 ---------------
+```python
+ro_write(pin, value)
+```
 
 ai_read method
 --------------
+```python
+ai_read(pin)
+```
 
 ao_read method
 --------------
+```python
+ao_read(pin)
+```
 
 ao_write method
 ---------------
+```python
+ao_write(pin, value)
+```
 
 reset method
 ------------
+```python
+reset()
+```
