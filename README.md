@@ -9,6 +9,27 @@ Table of contents
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Example](#example)
+- [TaliaBeeIO object](#taliabeeio-object)
+    - [Digital inputs](#digital-inputs)
+    - [Digital outputs](#digital-outputs)
+    - [Relay](#relay)
+    - [Analog inputs](#analog-inputs)
+    - [Analog outputs](#analog-outputs)
+    - [Temperature](#temperature)
+    - [Status](#status)
+    - [di_read method](#di_read-method)
+    - [do_read method](#do_read-method)
+    - [do_set method](#do_set-method)
+    - [do_reset method](#do_reset-method)
+    - [do_write method](#do_write-method)
+    - [ro_read method](#ro_read-method)
+    - [ro_set method](#ro_set-method)
+    - [ro_reset method](#ro_reset-method)
+    - [ro_write method](#ro_write-method)
+    - [ai_read method](#ai_read-method)
+    - [ao_read method](#ao_read-method)
+    - [ao_write method](#ao_write-method)
+    - [reset method](#reset-method)
 
 Requirements
 ============
@@ -45,3 +66,66 @@ print(io.temperature)
 # reset all outputs
 io.reset()
 ```
+
+TaliaBeeIO object
+=================
+
+Digital inputs
+--------------
+
+Digital outputs
+---------------
+
+Relay
+-----
+
+Analog inputs
+-------------
+
+Analog outputs
+--------------
+
+Temperature
+-----------
+
+Status
+------
+
+di_read method
+--------------
+
+do_read method
+--------------
+
+do_set method
+-------------
+
+do_reset method
+---------------
+
+do_write method
+---------------
+
+ro_read method
+--------------
+
+ro_set method
+-------------
+
+ro_reset method
+---------------
+
+ro_write method
+---------------
+
+ai_read method
+--------------
+
+ao_read method
+--------------
+
+ao_write method
+---------------
+
+reset method
+------------
