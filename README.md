@@ -12,7 +12,7 @@ Table of contents
 - [TaliaBeeIO object](#taliabeeio-object)
     - [Digital inputs](#digital-inputs)
     - [Digital outputs](#digital-outputs)
-    - [Relay](#relay)
+    - [Relays](#relays)
     - [Analog inputs](#analog-inputs)
     - [Analog outputs](#analog-outputs)
     - [Temperature](#temperature)
