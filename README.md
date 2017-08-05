@@ -45,26 +45,26 @@ pip3 install taliabeeio
 Example
 =======
 ```python
-from taliabeeio import TaliaBeeIO
-io = TaliaBeeIO()
-
-# read from the analog input 3
-print(io.ai3)
-
-# write to the analog output 4
-io.ao4 = 250
-
-# set the relay 13
-io.ro13 = True
-
-# reset the digital output 9
-io.do9 = False
-
-# read the temperature
-print(io.temperature)
-
-# reset all outputs
-io.reset()
+>>> from taliabeeio import TaliaBeeIO
+>>> io = TaliaBeeIO()
+>>>
+>>> # read from the analog input 3
+>>> print(io.ai3)
+0
+>>> # write to the analog output 4
+>>> io.ao4 = 250
+>>>
+>>> # set the relay 13
+>>> io.ro13 = True
+>>>
+>>> # reset the digital output 9
+>>> io.do9 = False
+>>>
+>>> # read the temperature
+>>> print(io.temperature)
+37.125
+>>> # reset all outputs
+>>> io.reset()
 ```
 
 TaliaBeeIO object
