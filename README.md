@@ -75,7 +75,7 @@ Create a new TaliaBeeIO instance. The instance communicates with the TaliaBee bo
 
 `timeout` sets the socket timeout value. The default value is 10 seconds.
 
-`verify` is the SSL certificate verification when HTTPS is used in `url`. Set `False` when the self-signed certificate is used andthis is the situation in most cases.
+`verify` is the SSL certificate verification when HTTPS is used in `url`. Set `False` when the self-signed certificate is used and this is the situation in most cases.
 
 ```python
 io = TaliaBeeIO(url='http://192.168.0.10')
@@ -83,9 +83,20 @@ io = TaliaBeeIO(url='http://192.168.0.10')
 
 Digital inputs
 --------------
+Read-only digital input pins. `diN` where N is a number from `1` to `16`.
+
+```python
+print(io.di5)
+```
 
 Digital outputs
 ---------------
+Writable digital output pins. `doN` where N is a number from `1` to `12`. Its value can be `0`/`False` or `1`/`True`.
+
+```python
+io.do12 = True
+print(io.do12)
+```
 
 Relay
 -----
