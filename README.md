@@ -78,7 +78,7 @@ Create a new TaliaBeeIO instance. The instance communicates with the TaliaBee bo
 `verify` is the SSL certificate verification when HTTPS is used in `url`. Set `False` when the self-signed certificate is used and this is the situation in most cases.
 
 ```python
-io = TaliaBeeIO(url='http://192.168.0.10')
+>>> io = TaliaBeeIO(url='http://192.168.0.10')
 ```
 
 Digital inputs
@@ -86,7 +86,8 @@ Digital inputs
 Read-only digital inputs. `diN` where N is a number from `1` to `16`. Its value is either `0` or `1`.
 
 ```python
-print(io.di5)
+>>> print(io.di5)
+0
 ```
 
 Digital outputs
@@ -94,8 +95,11 @@ Digital outputs
 Writable digital outputs. `doN` where N is a number from `1` to `12`. Its value is either `0`/`False` or `1`/`True`.
 
 ```python
-io.do12 = True
-print(io.do12)
+>>> print(io.do12)
+0
+>>> io.do12 = True
+>>> print(io.do12)
+1
 ```
 
 Relay
@@ -103,8 +107,11 @@ Relay
 Writable relay outputs. `roN` where N is a number from `13` to `16`. Its value is either `0`/`False` or `1`/`True`.
 
 ```python
-io.ro14 = True
-print(io.ro14)
+>>> print(io.ro14)
+0
+>>> io.ro14 = True
+>>> print(io.ro14)
+1
 ```
 
 Analog inputs
@@ -112,7 +119,8 @@ Analog inputs
 Read-only 12 bit analog inputs. `aiN` where N is a number from `1` to `4`. Its value is between 1 and 4095.
 
 ```python
-print(io.ai1)
+>>> print(io.ai1)
+0
 ```
 
 Analog outputs
@@ -120,8 +128,11 @@ Analog outputs
 Writable 12 bit analog outputs. `aoN` where N is a number from `1` to `4`. Its value is between 1 and 4095.
 
 ```python
-io.ao4 = 2000
-print(io.ao4)
+>>> print(io.ao4)
+0
+>>> io.ao4 = 2000
+>>> print(io.ao4)
+2000
 ```
 
 Temperature
@@ -130,7 +141,7 @@ Read-only temperature value in Celsius.
 
 ```python
 >>> print(io.temperature)
-28.275
+37.625
 ```
 
 Status
@@ -139,12 +150,12 @@ The dictionary object which contains the values of all digital and analog I/O an
 
 ```python
 >>> print(io.status)
-{'di': {'2': 0, '8': 1, '13': 0, '7': 1, '11': 0, '15': 0, '14': 0, '6': 0,
+{'di': {'2': 0, '8': 0, '13': 0, '7': 0, '11': 0, '15': 0, '14': 0, '6': 0,
 '10': 0, '16': 0, '1': 0, '4': 0, '9': 0, '3': 0, '12': 0, '5': 0},
 'do': {'2': 0, '8': 0, '7': 0, '11': 0, '6': 0, '10': 0, '1': 0, '4': 0,
-'9': 0, '3': 0, '12': 0, '5': 0}, 'temperature': 37.875, 'ro': {'15': 0,
-'14': 0, '13': 0, '16': 0}, 'ai': {'2': 0, '1': 250, '4': 0, '3': 1},
-'ao': {'2': 2000, '1': 0, '4': 0, '3': 0}}
+'9': 0, '3': 0, '12': 1, '5': 0}, 'temperature': 37.625, 'ro': {'15': 0,
+'14': 1, '13': 0, '16': 0}, 'ai': {'2': 0, '1': 1, '4': 0, '3': 1},
+'ao': {'2': 0, '1': 0, '4': 2000, '3': 0}}
 ```
 
 di_read method
