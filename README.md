@@ -1,6 +1,6 @@
 About
 =====
-TaliaBeeIO is a [Python](https://www.python.org/) interface to TaliaBee API. TaliaBeeIO can be used to monitor and to control the I/O pins of the TaliaBee box.
+TaliaBeeIO is a [Python](https://www.python.org/) interface to TaliaBee API. TaliaBeeIO can be used to monitor and to control the I/O pins of the TaliaBee box through API.
 
 Table of contents
 =================
@@ -12,7 +12,7 @@ Table of contents
 - [TaliaBeeIO object](#taliabeeio-object)
     - [Digital inputs](#digital-inputs)
     - [Digital outputs](#digital-outputs)
-    - [Relays](#relays)
+    - [Relay outputs](#relay-outputs)
     - [Analog inputs](#analog-inputs)
     - [Analog outputs](#analog-outputs)
     - [Temperature](#temperature)
@@ -54,7 +54,7 @@ Example
 >>> # write to the analog output 4
 >>> io.ao4 = 250
 >>>
->>> # set the relay 13
+>>> # set the relay output 13
 >>> io.ro13 = True
 >>>
 >>> # reset the digital output 9
@@ -110,8 +110,8 @@ Writable digital outputs. `doN` where N is a number from `1` to `12`. Its value 
 1
 ```
 
-Relays
-------
+Relay outputs
+-------------
 Writable relay outputs. `roN` where N is a number from `13` to `16`. Its value is either `0`/`False` or `1`/`True`.
 
 ```python
@@ -164,6 +164,9 @@ The dictionary object which contains the values of all digital and analog I/O an
 '9': 0, '3': 0, '12': 1, '5': 0}, 'temperature': 37.625, 'ro': {'15': 0,
 '14': 1, '13': 0, '16': 0}, 'ai': {'2': 0, '1': 1, '4': 0, '3': 1},
 'ao': {'2': 0, '1': 0, '4': 2000, '3': 0}}
+>>>
+>>> print(io.status.get('ao'))
+{'2': 0, '1': 0, '4': 2000, '3': 0}
 ```
 
 di_read method
