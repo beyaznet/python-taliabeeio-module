@@ -1,6 +1,6 @@
 About
 =====
-TaliaBeeIO is a [Python](https://www.python.org/) interface to TaliaBee API. TaliaBeeIO can be used to monitor and to control the I/O pins of the TaliaBee box through API.
+TaliaBeeIO is a [Python](https://www.python.org/) interface to [TaliaBee](https://github.com/beyaznet/TaliaBee) API. TaliaBeeIO can be used to monitor and to control the I/O pins of the [TaliaBee](https://github.com/beyaznet/TaliaBee) box through API.
 
 Table of contents
 =================
@@ -73,7 +73,7 @@ TaliaBeeIO object
 TaliaBeeIO(url='http://127.0.0.1', timeout=10, verify=False)
 ```
 
-Create a new TaliaBeeIO instance. The instance communicates with the TaliaBee box at the given `url`. The default value is `http://127.0.0.1` and the instance communicates with the local box, if there is no given `url`.
+Create a new TaliaBeeIO instance. The instance communicates with the [TaliaBee](https://github.com/beyaznet/TaliaBee) box at the given `url`. The default value is `http://127.0.0.1` and the instance communicates with the local box, if there is no given `url`.
 
 `timeout` sets the socket timeout value. The default value is 10 seconds.
 
