@@ -124,7 +124,7 @@ Writable relay outputs. `roN` where N is a number from `13` to `16`. Its value i
 
 Analog inputs
 -------------
-Read-only 12 bit analog inputs. `aiN` where N is a number from `1` to `4`. Its value is between 1 and 4095.
+Read-only 12 bit analog inputs. `aiN` where N is a number from `1` to `4`. Its value is between 0 and 4095.
 
 ```python
 >>> print(io.ai1)
@@ -133,7 +133,7 @@ Read-only 12 bit analog inputs. `aiN` where N is a number from `1` to `4`. Its v
 
 Analog outputs
 --------------
-Writable 12 bit analog outputs. `aoN` where N is a number from `1` to `4`. Its value is between 1 and 4095.
+Writable 12 bit analog outputs. `aoN` where N is a number from `1` to `4`. Its value is between 0 and 4095.
 
 ```python
 >>> print(io.ao4)
@@ -310,7 +310,7 @@ ai_read method
 ai_read(pin)
 ```
 
-Return the value of the analog input. `pin` is the analog input pin number and it's an integer between 1 and 4. The returning value is an integer between 1 and 4095.
+Return the value of the analog input. `pin` is the analog input pin number and it's an integer between 1 and 4. The returning value is an integer between 0 and 4095.
 
 ```python
 >>> print(io.ai_read(2))
@@ -323,7 +323,7 @@ ao_read method
 ao_read(pin)
 ```
 
-Return the value of the analog output. `pin` is the analog output pin number and it's an integer between 1 and 4. The returning value is an integer between 1 and 4095.
+Return the value of the analog output. `pin` is the analog output pin number and it's an integer between 1 and 4. The returning value is an integer between 0 and 4095.
 
 ```python
 >>> print(io.ao_read(2))
@@ -336,7 +336,7 @@ ao_write method
 ao_write(pin, value)
 ```
 
-Write to the analog output. `pin` is the analog output pin number and it's an integer between 1 and 4. `value` is an integer between 1 and 4095.
+Write to the analog output. `pin` is the analog output pin number and it's an integer between 1 and 4. `value` is an integer between 0 and 4095.
 
 ```python
 >>> print(io.ao2)
