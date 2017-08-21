@@ -111,20 +111,29 @@ class TaliaBeeIO(object):
         url = self.url + '/api/ro/{}/reset'.format(pin)
         self._call(url)
 
-    def ai_read(self, pin):
+    def ai_read(self, pin, start=0.0, end=4095.0):
         pin = int(pin)
-        url = self.url + '/api/ai/{}/read'.format(pin)
+        start = float(start)
+        end = float(end)
+        url = self.url + '/api/ai/{}/read?start={}&end={}'.format(
+                         pin, start, end)
         return self._call(url)
 
-    def ao_read(self, pin):
+    def ao_read(self, pin, start=0.0, end=4095.0):
         pin = int(pin)
-        url = self.url + '/api/ao/{}/read'.format(pin)
+        start = float(start)
+        end = float(end)
+        url = self.url + '/api/ao/{}/read?start={}&end={}'.format(
+                         pin, start, end)
         return self._call(url)
 
-    def ao_write(self, pin, val):
+    def ao_write(self, pin, val, start=0.0, end=4095.0):
         pin = int(pin)
         val = int(val)
-        url = self.url + '/api/ao/{}/write?val={}'.format(pin, val)
+        start = float(start)
+        end = float(end)
+        url = self.url + '/api/ao/{}/write?val={}&start={}&end={}'.format(
+                         pin, val, start, end)
         self._call(url)
 
     @property
